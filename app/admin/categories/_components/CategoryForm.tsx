@@ -12,9 +12,7 @@ import {
 } from '@/lib/api/categories';
 import { fetchAllProducts } from '@/lib/api/products';
 import type { Category, CategoryFormInput } from '@/lib/types/category';
-
-import { ProductSummary } from '@/lib/types/products';
-
+import { ProductSummary } from '@/app/types/products';
 import { ButtonSpinner } from '@/app/ui/ButtonSpinner';
 
 const inputClass =
