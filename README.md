@@ -43,14 +43,6 @@ Para rodar o projeto, você precisa de contas nos serviços abaixo:
 - **Cloudinary**: upload de imagens e vídeos
 - **Provedor de e-mail com SMTP**: envio do magic link de login (por exemplo, Gmail com senha de app)
 
-Copie o arquivo de exemplo e preencha os valores:
-
-```bash
-cp .env.example .env.local
-```
-
-Variáveis com o prefixo `NEXT_PUBLIC_` são enviadas ao navegador, então nunca devem conter segredos. Nunca faça commit do `.env.local`.
-
 ## Rotas
 
 **Públicas**
@@ -83,8 +75,7 @@ Cada produto aceita várias imagens. Elas são armazenadas como um array `JSONB`
 
 A migração de imagem única para múltiplas imagens passou por todas as camadas: banco de dados, API, upload, painel administrativo e vitrine.
 
-<img src="./docs/imagens/3.png" alt="Tela de edição de produto com várias imagens" width="500">
-<img src="./docs/imagens/4.png" alt="Tela de edição de produto com várias imagens" width="500">
+<img src="./docs/imagens/3.png" alt="Tela de edição de produto com várias imagens" width="200"> <img src="./docs/imagens/4.png" alt="Tela de edição de produto com várias imagens" width="500">
 
 ## Categorias
 
