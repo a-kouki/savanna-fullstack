@@ -83,8 +83,8 @@ Cada produto aceita várias imagens. Elas são armazenadas como um array `JSONB`
 
 A migração de imagem única para múltiplas imagens passou por todas as camadas: banco de dados, API, upload, painel administrativo e vitrine.
 
-![Tela de edição de produto com várias imagens](docs/images/3.png)
-![Tela de edição de produto com várias imagens](docs/images/4.png)
+<img src="./docs/imagens/3.png" alt="Tela de edição de produto com várias imagens" width="500">
+<img src="./docs/imagens/4.png" alt="Tela de edição de produto com várias imagens" width="500">
 
 ## Categorias
 
@@ -148,22 +148,22 @@ A página de pedidos do painel oferece filtros, paginação e busca. Os pedidos 
 
 O painel e a vitrine são responsivos, com padrão de breakpoints consistente entre os módulos.
 
-![Interface do Savanna](docs/images/15.png)
-![Interface do Savanna](docs/images/10.png)
-![Interface do Savanna](docs/images/6.png)
+<img src="./docs/imagens/15.png" alt="Interface do Savanna" width="500">
+<img src="./docs/imagens/10.png" alt="Interface do Savanna" width="500">
+<img src="./docs/imagens/6.png" alt="Interface do Savanna" width="500">
 
 ### Grid de produtos
 
-![Grid de produtos da vitrine](docs/images/11.png)
-![Grid de produtos da vitrine](docs/images/12.png)
+<img src="./docs/imagens/11.png" alt="Grid de produtos da vitrine" width="500">
+<img src="./docs/imagens/12.png" alt="Grid de produtos da vitrine" width="500">
 
 ### Responsividade
 
-![Vitrine em telas de tamanhos diferentes](docs/images/13.png)
-![Vitrine em telas de tamanhos diferentes](docs/images/14.png)
+<img src="./docs/imagens/13.png" alt="Vitrine em telas de tamanhos diferentes" width="500">
+<img src="./docs/imagens/14.png" alt="Vitrine em telas de tamanhos diferentes" width="500">
 
 ### Speed-dial no mobile
 
 No painel, a barra de navegação inferior ganha um speed-dial para as rotas que não cabem na tela.
 
-![Speed-dial da navegação mobile do painel](docs/images/7.png)
+<img src="./docs/imagens/7.png" alt="Vitrine em telas de tamanhos diferentes" width="500">
