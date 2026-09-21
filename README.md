@@ -1,12 +1,16 @@
 # Savanna
 
+[Acessar o sistema](https://savanna-fullstack.vercel.app/)
+
 Loja virtual full-stack para venda de roupas e camisas, com vitrine pública e painel administrativo completo. Construída com Next.js e Supabase, com pedidos finalizados por WhatsApp.
 
-![Vitrine do Savanna](docs/images/capa.png)
+![Vitrine do Savanna](docs/images/1.png)
+![Vitrine do Savanna](docs/images/2.png)
 
 ## Sumário
 
 - [Ferramentas](#ferramentas)
+- [Variáveis de ambiente](#variáveis-de-ambiente)
 - [Rotas](#rotas)
 - [Cache](#cache)
 - [Multi-imagem por produto](#multi-imagem-por-produto)
@@ -24,24 +28,50 @@ Loja virtual full-stack para venda de roupas e camisas, com vitrine pública e p
 | **Supabase** | Postgres, autenticação e funções SQL (RPC) |
 | **Tailwind CSS** | Estilização e responsividade |
 | **Cloudinary** | Upload e entrega de imagens e vídeos |
-| **Redis** | Rate limiting |
+| **Upstash Redis** | Rate limiting |
 | **Zustand** | Estado do carrinho, com persistência no navegador |
 | **Sonner** | Notificações (toasts) |
 | **Recharts** | Gráficos do dashboard de métricas |
 | **WhatsApp** | Finalização do pedido |
 
+## Variáveis de ambiente
+
+Para rodar o projeto, você precisa de contas nos serviços abaixo:
+
+- **Supabase**: banco de dados e autenticação
+- **Upstash**: Redis para o rate limiting
+- **Cloudinary**: upload de imagens e vídeos
+- **Provedor de e-mail com SMTP**: envio do magic link de login (por exemplo, Gmail com senha de app)
+
+Copie o arquivo de exemplo e preencha os valores:
+
+```bash
+cp .env.example .env.local
+```
+
+Variáveis com o prefixo `NEXT_PUBLIC_` são enviadas ao navegador, então nunca devem conter segredos. Nunca faça commit do `.env.local`.
+
 ## Rotas
 
-A aplicação separa a área pública da administrativa por prefixo:
+**Públicas**
 
-| Área | Prefixo | Acesso |
-| --- | --- | --- |
-| Vitrine e API pública | — | Público, passando pelo `gatekeeper()` |
-| Painel administrativo (API) | `/api/admin/*` | Somente administradores autenticados |
+| Rota | Descrição |
+| --- | --- |
+| `/products` | Listagem de produtos |
+| `/categoria` | Lista de categorias |
+| `/categoria/[nome-products]` | Produtos de uma categoria |
+| `/cart` | Carrinho |
 
-O `gatekeeper()` é uma camada única que centraliza as regras aplicadas às rotas públicas. Já as rotas administrativas ficam todas sob `/api/admin/*`, o que permite protegê-las por padrão e reduz o risco de esquecer uma verificação numa rota nova.
+**Painel administrativo**
 
-<!-- COMPLETAR: árvore real de rotas (pasta app/) -->
+| Rota | Descrição |
+| --- | --- |
+| `/admin/banners` | Banners |
+| `/admin/categories` | Categorias |
+| `/admin/coupons` | Cupons |
+| `/admin/metrics` | Métricas |
+| `/admin/order` | Pedidos |
+| `/admin/products` | Produtos |
 
 ## Cache
 
@@ -53,7 +83,8 @@ Cada produto aceita várias imagens. Elas são armazenadas como um array `JSONB`
 
 A migração de imagem única para múltiplas imagens passou por todas as camadas: banco de dados, API, upload, painel administrativo e vitrine.
 
-![Tela de edição de produto com várias imagens](docs/images/multi-imagem.png)
+![Tela de edição de produto com várias imagens](docs/images/3.png)
+![Tela de edição de produto com várias imagens](docs/images/4.png)
 
 ## Categorias
 
@@ -86,8 +117,6 @@ Nas verificações de acesso no servidor, a sessão é validada com `getUser()`,
 
 O rate limiting depende de descobrir o IP real do cliente. O tratamento do fallback evita que o limite seja burlado por headers forjados ou que todos os visitantes sem IP identificado dividam o mesmo contador.
 
-<!-- REVISAR: descrever exatamente como o IP é obtido e qual é o fallback no código -->
-
 ## Banco de dados e backend
 
 ### RPC atômica de pedido com cupom
@@ -102,34 +131,39 @@ Sistema completo de cupons, com desconto aplicável ao carrinho inteiro, a produ
 
 O dashboard do painel é alimentado pela RPC `get_metrics_dashboard`, que consolida várias métricas em uma única consulta SQL, em vez de várias chamadas somadas no servidor. Os gráficos são renderizados com Recharts.
 
-**Métricas exibidas e tipos de gráfico**
+**Métricas exibidas**
 
-<!-- COMPLETAR: uma linha para cada métrica do dashboard, com o tipo de gráfico (linha, barras, pizza...) e o que ela mostra -->
-
-| Métrica | Tipo de gráfico | O que mostra |
-| --- | --- | --- |
-| _a completar_ | _a completar_ | _a completar_ |
+- Receita ao longo do tempo
+- Produtos mais vendidos
+- Tamanhos mais vendidos
+- Forma de pagamento
+- Pedidos por dia da semana
+- Pedidos por horário
 
 ### Pedidos
 
 A página de pedidos do painel oferece filtros, paginação e busca. Os pedidos feitos podem ser exportados para Excel diretamente pelo painel, para consulta e controle fora do sistema.
 
-<!-- CONFIRMAR: formato do arquivo (.xlsx ou .csv) e se a exportação respeita os filtros aplicados -->
-
 ## Interface
 
 O painel e a vitrine são responsivos, com padrão de breakpoints consistente entre os módulos.
 
+![Interface do Savanna](docs/images/15.png)
+![Interface do Savanna](docs/images/10.png)
+![Interface do Savanna](docs/images/6.png)
+
 ### Grid de produtos
 
-![Grid de produtos da vitrine](docs/images/vitrine-grid.png)
+![Grid de produtos da vitrine](docs/images/11.png)
+![Grid de produtos da vitrine](docs/images/12.png)
 
 ### Responsividade
 
-![Vitrine em telas de tamanhos diferentes](docs/images/responsivo.png)
+![Vitrine em telas de tamanhos diferentes](docs/images/13.png)
+![Vitrine em telas de tamanhos diferentes](docs/images/14.png)
 
 ### Speed-dial no mobile
 
 No painel, a barra de navegação inferior ganha um speed-dial para as rotas que não cabem na tela.
 
-![Speed-dial da navegação mobile do painel](docs/images/speed-dial.png)
+![Speed-dial da navegação mobile do painel](docs/images/7.png)
