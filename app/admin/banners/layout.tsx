@@ -5,10 +5,8 @@ import { usePathname } from 'next/navigation';
 
 export default function BannersLayout({
   children,
-  //editPanel,
 }: {
   children: React.ReactNode;
-  //editPanel: React.ReactNode;
 }) {
   const pathname = usePathname();
 
@@ -17,7 +15,6 @@ export default function BannersLayout({
   return (
     <div>
       <div className={isEditing ? 'hidden' : ''}>{children}</div>
-      {/*editPanel*/}
     </div>
   );
 }
