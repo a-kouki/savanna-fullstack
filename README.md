@@ -142,8 +142,8 @@ O painel e a vitrine são responsivos, com padrão de breakpoints consistente en
 
 <table>
   <tr>
-    <td><img src="./docs/imagens/15.png" alt="Interface do Savanna" width="500"></td>
-    <td><img src="./docs/imagens/10.png" alt="Interface do Savanna" width="500"></td>
+    <td><img src="./docs/imagens/15.png" alt="Interface do Savanna" width="200"></td>
+    <td><img src="./docs/imagens/10.png" alt="Interface do Savanna" width="200"></td>
     <td><img src="./docs/imagens/6.png" alt="Interface do Savanna" width="500"></td>
   </tr>
 </table>
@@ -152,18 +152,22 @@ O painel e a vitrine são responsivos, com padrão de breakpoints consistente en
 
 <table>
   <tr>
-    <td><img src="./docs/imagens/11.png" alt="Grid de produtos da vitrine" width="500"></td>
-    <td><img src="./docs/imagens/12.png" alt="Grid de produtos da vitrine" width="500"></td>
+    <td><img src="./docs/imagens/11.png" alt="Grid de produtos da vitrine" width="200"></td>
+    <td><img src="./docs/imagens/12.png" alt="Grid de produtos da vitrine" width="200"></td>
   </tr>
 </table>
 
 ### Responsividade
 
-<img src="./docs/imagens/13.png" alt="Vitrine em telas de tamanhos diferentes" width="500">
-<img src="./docs/imagens/14.png" alt="Vitrine em telas de tamanhos diferentes" width="500">
+<table>
+  <tr>
+    <td><img src="./docs/imagens/13.png" alt="Vitrine em telas de tamanhos diferentes" width="300"></td>
+    <td><img src="./docs/imagens/14.png" alt="Vitrine em telas de tamanhos diferentes" width="500"></td>
+  </tr>
+</table>
 
 ### Speed-dial no mobile
 
 No painel, a barra de navegação inferior ganha um speed-dial para as rotas que não cabem na tela.
 
-<img src="./docs/imagens/7.png" alt="Vitrine em telas de tamanhos diferentes" width="500">
+<img src="./docs/imagens/7.png" alt="Vitrine em telas de tamanhos diferentes" width="200">
