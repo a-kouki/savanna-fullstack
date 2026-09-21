@@ -28,7 +28,7 @@ export function TestCard() {
       </div>
 
       {/* Botão de carrinho isolado */}
-      <AddToCartButton product={MOCK_PRODUCT} />
+      {/*<AddToCartButton product={MOCK_PRODUCT} />*/}
 
     </div>
   )
