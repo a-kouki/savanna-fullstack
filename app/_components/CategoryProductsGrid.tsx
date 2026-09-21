@@ -35,7 +35,7 @@ export function CategoryProductsGrid({ products }: { products: Product[] }) {
       ) : (
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {filtered.map((product) => (
-            <ProductCard key={product.id} product={product} size="sm" />
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       )}
