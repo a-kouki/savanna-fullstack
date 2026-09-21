@@ -4,7 +4,7 @@
 
 Loja virtual full-stack para venda de roupas e camisas, com vitrine pública e painel administrativo completo. Construída com Next.js e Supabase, com pedidos finalizados por WhatsApp.
 
-![Vitrine do Savanna](<img src="docs/images/1.png" width="700">)
+![Vitrine do Savanna]<img src="docs/images/1.png" width="700">
 ![Vitrine do Savanna](./docs/images/2.png)
 
 ## Sumário
