@@ -75,7 +75,7 @@ Cada produto aceita várias imagens. Elas são armazenadas como um array `JSONB`
 
 A migração de imagem única para múltiplas imagens passou por todas as camadas: banco de dados, API, upload, painel administrativo e vitrine.
 
-<img src="./docs/imagens/3.png" alt="Tela de edição de produto com várias imagens" width="200"> <img src="./docs/imagens/4.png" alt="Tela de edição de produto com várias imagens" width="500">
+<img src="./docs/imagens/3.png" alt="Tela de edição de produto com várias imagens" width="200"> <img src="./docs/imagens/4.png" alt="Tela de edição de produto com várias imagens" width="800">
 
 ## Categorias
 
@@ -139,14 +139,23 @@ A página de pedidos do painel oferece filtros, paginação e busca. Os pedidos 
 
 O painel e a vitrine são responsivos, com padrão de breakpoints consistente entre os módulos.
 
-<img src="./docs/imagens/15.png" alt="Interface do Savanna" width="500">
-<img src="./docs/imagens/10.png" alt="Interface do Savanna" width="500">
-<img src="./docs/imagens/6.png" alt="Interface do Savanna" width="500">
+
+<table>
+  <tr>
+    <td><img src="./docs/imagens/15.png" alt="Interface do Savanna" width="500"></td>
+    <td><img src="./docs/imagens/10.png" alt="Interface do Savanna" width="500"></td>
+    <td><img src="./docs/imagens/6.png" alt="Interface do Savanna" width="500"></td>
+  </tr>
+</table>
 
 ### Grid de produtos
 
-<img src="./docs/imagens/11.png" alt="Grid de produtos da vitrine" width="500">
-<img src="./docs/imagens/12.png" alt="Grid de produtos da vitrine" width="500">
+<table>
+  <tr>
+    <td><img src="./docs/imagens/11.png" alt="Grid de produtos da vitrine" width="500"></td>
+    <td><img src="./docs/imagens/12.png" alt="Grid de produtos da vitrine" width="500"></td>
+  </tr>
+</table>
 
 ### Responsividade
 
