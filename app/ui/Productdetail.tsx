@@ -35,9 +35,9 @@ export async function ProductDetail({ params }: { params: Promise<{ id: string }
         ${getRationclass(product.attributes?.ratio)}
         overflow-hidden bg-zinc-100
       `}>
-        {product.public_id ? (
+        {product.images[0].public_id ? (
           <ProductsImgCoudinary
-            public_id={product.public_id}
+            public_id={product.images[0].public_id }
             name={product.name}
             clas="object-cover"
           />
@@ -68,11 +68,11 @@ export async function ProductDetail({ params }: { params: Promise<{ id: string }
             {product.attributes?.brand && (
               <span className="font-abeezee text-[11px] text-black/40">{product.attributes.brand}</span>
             )}
-            {product.attributes?.brand && product.attributes?.category && (
+            {product.attributes?.brand && product.category_slug && (
               <span className="text-black/20 text-[11px]">·</span>
             )}
-            {product.attributes?.category && (
-              <span className="font-abeezee text-[11px] text-black/40">{product.attributes.category}</span>
+            {product.category_slug && (
+              <span className="font-abeezee text-[11px] text-black/40">{product.category_slug}</span>
             )}
             <span className={`
               font-abeezee text-[10px] px-2 py-0.5 ml-auto
