@@ -18,7 +18,11 @@ export const getProducts = unstable_cache(
       .select(PRODUCT_FIELDS)
       .eq('user_id', process.env.USER_ID)
 
-    if (error || !products) return {}
+    if (error) {
+      console.error("getProducts error:", error)
+      throw error
+    }
+    if (!products) throw new Error("getProducts: sem dados")
 
     const flattened = products.map((p: any) => {
       const { product_categories, ...rest } = p
