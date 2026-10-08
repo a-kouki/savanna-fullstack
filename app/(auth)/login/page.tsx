@@ -34,12 +34,14 @@ export default function AdminLogin() {
 
       const data = await res.json()
 
+      /*
       if (res.status === 403 && data.mustUseMagicLink) {
         toast.info('Endereço desconhecido. Enviamos um Magic Link para seu e-mail.')
         await sendMagicLink()
         setIsLoading(false)
         return
       }
+      */
 
       if (!res.ok) {
         toast.error('E-mail ou senha inválidos.')
