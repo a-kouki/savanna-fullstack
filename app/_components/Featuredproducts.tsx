@@ -30,7 +30,7 @@ export function FeaturedProducts({ products }: { products: Product[] }) {
           {featured.length > 5 && (
             <div className="self-center shrink-0">
               <a
-                href=""
+                href="/categoria/national-team"
                 className="font-abeezee text-sm px-8 py-2 hover:bg-black hover:text-white transition-colors duration-200"
               >
                 mais →
