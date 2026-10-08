@@ -102,7 +102,7 @@ export function CategoryPageClient({
             ) : (
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {searchResults.map((product) => (
-                  <Link key={product.id} href={`/${product.name}`} className="block">
+                  <a key={product.id} href={`/products/${product.src}`} className="block">
                     <div className="aspect-square bg-zinc-100 mb-2 overflow-hidden">
                       {product.images?.[0]?.url && (
                         <img
@@ -118,7 +118,7 @@ export function CategoryPageClient({
                         R$ {product.price.toFixed(2)}
                       </p>
                     )}
-                  </Link>
+                  </a>
                 ))}
               </div>
             )
