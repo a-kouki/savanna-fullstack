@@ -29,12 +29,21 @@ export function AllProducts({ products }: { products: Product[] }) {
 
           {hasMore && (
             <div className="flex justify-center mt-8">
+              {/*
               <button
                 onClick={() => setVisible((v) => v + PAGE_SIZE)}
                 className="font-abeezee text-sm border border-black px-8 py-2 hover:bg-black hover:text-white transition-colors duration-200"
               >
                 mais →
               </button>
+              */
+              }
+              <a
+                href="/categoria/national-team"
+                className="font-abeezee text-sm border border-black px-8 py-2 hover:bg-black hover:text-white transition-colors duration-200"
+              >
+                mais →
+              </a>
             </div>
           )}
 
