@@ -73,6 +73,7 @@ export async function POST(req: NextRequest) {
   await redis.del(`failed_attempts:${ip}`)
 
   // ── 7. Verifica IP conhecido ──────────────────────────────────
+  /*
   const knownIpsKey = `known_ips:${email}`
   const isKnownIp   = await redis.sismember(knownIpsKey, ip)
 
@@ -83,6 +84,7 @@ export async function POST(req: NextRequest) {
   // ── 8. IP conhecido → seta sessão e libera ───────────────────
   await redis.sadd(knownIpsKey, ip)
   await redis.expire(knownIpsKey, KNOWN_IP_TTL)
+  */
 
   const response = NextResponse.json({ success: true })
 
