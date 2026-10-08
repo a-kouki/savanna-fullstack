@@ -33,8 +33,8 @@ export default async function ProductPage({ params }:{ params: Promise<{ src: st
   console.log("SRC---", src)
   const product = await getProductsBySrc(src)
   console.log("products---", product)
-  if (!product) notFound()
-
+  //if (!product) notFound()
+  if (!product) return(<></>)
 
   return (
     <div className="bg-white min-h-screen">
