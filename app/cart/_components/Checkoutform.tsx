@@ -6,7 +6,7 @@ import { useCartStore } from "@/lib/cart-store"
 
 import { ButtonSpinner } from "@/app/ui/ButtonSpinner"
 
-const WHATSAPP_NUMBER = "5566997187450"
+const WHATSAPP_NUMBER = "556699333085"
 
 export function CheckoutForm() {
   const {
