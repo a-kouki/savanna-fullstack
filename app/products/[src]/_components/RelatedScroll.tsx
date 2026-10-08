@@ -37,9 +37,9 @@ export function RelatedScroll({ items }: { items: Item[] }) {
         className="flex gap-5 overflow-x-auto no-scrollbar px-10 scroll-smooth"
       >
         {items.map((item) => (
-          <Link
+          <a
             key={item.src}
-            href={`/${item.src}`}
+            href={`/products/${item.src}`}
             className="flex flex-col gap-3 shrink-0 w-[240px] md:w-[280px] group"
           >
             <div className="relative w-full h-[260px] md:h-[300px] border-2 border-[#e8c300] overflow-hidden bg-zinc-100">
@@ -59,7 +59,7 @@ export function RelatedScroll({ items }: { items: Item[] }) {
                 </p>
               )}
             </div>
-          </Link>
+          </a>
         ))}
       </div>
 
