@@ -447,7 +447,7 @@ function MoreStack({
         }}
       >
         {items.map((item, i) => {
-          const order = items.length - 1 - i
+          const order = items.length - i
           return (
             <button
               key={item.id}
@@ -470,6 +470,20 @@ function MoreStack({
             </button>
           )
         })}
+      </div>
+
+      {/* Sair */}
+      <div
+        className="shrink-0"
+        style={{
+          animation: `riseUp 280ms cubic-bezier(.34,1.56,.64,1) both`,
+          animationDelay: `0ms`,
+        }}
+      >
+        <SignOutButton
+          className="flex items-center justify-center rounded-full active:scale-90 transition-transform text-red-400"
+          // tamanho e borda via style abaixo
+        />
       </div>
 
       <style jsx global>{`
