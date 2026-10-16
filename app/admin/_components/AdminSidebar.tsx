@@ -470,20 +470,21 @@ function MoreStack({
             </button>
           )
         })}
-      </div>
 
-      {/* Sair */}
-      <div
-        className="shrink-0"
-        style={{
-          animation: `riseUp 280ms cubic-bezier(.34,1.56,.64,1) both`,
-          animationDelay: `0ms`,
-        }}
-      >
-        <SignOutButton
-          className="flex items-center justify-center rounded-full active:scale-90 transition-transform text-red-400"
-          // tamanho e borda via style abaixo
-        />
+        {/* Sair */}
+        <div
+          className="shrink-0"
+          style={{
+            animation: `riseUp 280ms cubic-bezier(.34,1.56,.64,1) both`,
+            animationDelay: `0ms`,
+          }}
+        >
+          <SignOutButton
+            className="flex items-center justify-center rounded-full active:scale-90 transition-transform text-red-400"
+            // tamanho e borda via style abaixo
+          />
+        </div>
+        
       </div>
 
       <style jsx global>{`
