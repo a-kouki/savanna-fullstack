@@ -38,7 +38,7 @@ export function CategorySection({
           <div className="flex justify-center mt-8 sm:hidden">
             <Link
               href={`/categoria/${slug}`}
-              className="font-abeezee text-sm border border-black px-8 py-2 hover:bg-black hover:text-white transition-colors duration-200 inline-block text-center"
+              className="text-black font-abeezee text-sm border border-black px-8 py-2 hover:bg-black hover:text-white transition-colors duration-200 inline-block text-center"
             >
               mais →
             </Link>
