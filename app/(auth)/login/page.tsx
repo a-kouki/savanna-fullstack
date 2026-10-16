@@ -58,9 +58,9 @@ export default function AdminLogin() {
 
       toast.success('Login feito com sucesso!')
       setIsLoading(false)
-      router.refresh()
-      router.push('/admin/cars')
-
+      //router.refresh()
+      //router.push('/admin/cars')
+      window.location.href = '/admin'
     } catch {
       toast.error('Erro de conexão.')
       setIsLoading(false)
